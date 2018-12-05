@@ -1,0 +1,58 @@
+<div style="text-align:center">
+  <h1>
+    Cricket Trivia
+  </h1>
+</div>
+<form #postForm="ngForm" style="margin-left: 10px;margin-right: 10px;" *ngIf="postArr && postArr.length > 0">
+  <div class="form-group">
+    <label for="quesA">{{postArr[0].question}}</label>
+    <select [(ngModel)]="selectedOptionA" class="form-control" id="quesA" required name="quesA">
+      <option></option>
+      <option *ngFor="let option of postArr[0].options">{{option}}</option>
+    </select>
+    <div *ngIf="errorA" class="alert alert-danger">
+      Options must be selected or it should not be empty
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="quesB">{{postArr[1].question}}</label>
+    <select class="form-control" id="quesB" required name="questionB" [(ngModel)]="selectedOptionB" class="form-control">
+      <option></option>
+      <option *ngFor="let option of postArr[1].options">{{option}}</option>
+    </select>
+    <div *ngIf="errorB" class="alert alert-danger">
+      Options must be selected or it should not be empty
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="quesC">{{postArr[2].question}}</label>
+    <select class="form-control" id="quesC" required name="questionC" [(ngModel)]="selectedOptionC" class="form-control">
+      <option></option>
+      <option *ngFor="let option of postArr[2].options">{{option}}</option>
+    </select>
+    <div *ngIf="errorC" class="alert alert-danger">
+      Options must be selected or it should not be empty
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="quesD">{{postArr[3].question}}</label>
+    <select class="form-control" id="quesD" required name="questionD" [(ngModel)]="selectedOptionD" class="form-control">
+      <option></option>
+      <option *ngFor="let option of postArr[3].options">{{option}}</option>
+    </select>
+    <div *ngIf="errorD" class="alert alert-danger">
+      Options must be selected or it should not be empty
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+  <button type="button" class="btn btn-success" style="margin-left: 10px;" (click)="reset()">Reset</button>
+</form>
+
+<div class="container">
+  <div class="col-sm-4 text-center">
+    <h2 class="text-center">Bar Chart</h2>
+    <canvas baseChart [data]="barChartData" [labels]="barChartLabels" [chartType]="barChartType"></canvas>
+  </div>
+</div>

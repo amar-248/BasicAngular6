@@ -1,0 +1,32 @@
+{
+    "posts": [
+      {
+        "question": "When was the last time India won World Cup?",
+        "options":[ "2009", "2008","2007"],
+        "answer":"2009",
+        "id": 1
+      },
+      {
+        "question": "What is the highest individual score by a batsman in Test Cricket?",
+        "answer": "375",
+        "options":[ "334", "375","400"],
+        "id": 2
+      },
+      {
+        "question": "Who has won most number of cricket world cups?",
+        "answer": "Australia",
+        "options":[ "Australia", "India","Pakistan"],
+        "id": 3
+      },
+      {
+        "question": "How many international centuries does Sachin Tendulkar has under his name?",
+        "answer": "49",
+        "options":[ "49", "55","66"],
+        "id": 4
+      }
+    ],
+    "comments": [],
+    "profile": {
+      "name": "typicode"
+    }
+  }

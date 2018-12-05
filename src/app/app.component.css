@@ -1,0 +1,14 @@
+.form-group {
+    background-color: lightgray;
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+}
+
+form{
+    width:600px;;
+}
+
+select, option { width: 120px; }
